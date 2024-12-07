@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
     <style>
-        /* Base Styles */
+        
         body {
             margin: 0;
             font-family: 'Dancing Script', sans-serif;
@@ -89,7 +89,7 @@
         <h1>Where shall we go?</h1>
     </header>
 
-    <section class="beach-container">
+    <section class="beach-container" id="beach-container">
         <!-- Beach 1 -->
         <a href="https://www.visitmexico.com/en/main-destinations/qr/cancun" target="_blank" class="beach-card">
             <img src="cancun3.jpg" alt="Cancun Beach">
@@ -114,6 +114,29 @@
             <div class="overlay">The Maldives</div>
         </a>
     </section>
+
+    <script>
+        // JavaScript //
+        const beachContainer = document.getElementById("beach-container");
+
+        // Add a new beach card //
+        const newBeachCard = document.createElement("a");
+        newBeachCard.href = "https://www.gohawaii.com/";
+        newBeachCard.target = "_blank";
+        newBeachCard.className = "beach-card";
+        newBeachCard.innerHTML = `
+            <img src="sunset.jpg" alt="Beach">
+            <div class="overlay">Hawaii</div>
+        `;
+        beachContainer.appendChild(newBeachCard);
+
+        // Alert when a beach card is clicked
+        const beachCards = document.querySelectorAll(".beach-card");
+        beachCards.forEach(card => {
+            card.addEventListener("click", (event) => {
+                alert(`You clicked on ${card.querySelector(".overlay").textContent} beach!`);
+            });
+        });
+    </script>
 </body>
 </html>
-
