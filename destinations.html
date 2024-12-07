@@ -6,13 +6,13 @@
     <title>Where shall we go? - Beach Love</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Spicy+Rice&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
     <style>
+        /* Base Styles */
         body {
             margin: 0;
             font-family: 'Dancing Script', sans-serif;
-            background-color: #c9b8a3
-           
+            background-color: #c9b8a3;
         }
 
         header {
@@ -28,61 +28,92 @@
             margin: 0;
         }
 
-        /* Contact Form Styling */
-        #beachclick {
-            max-width: 600px;
+        /* Clickable Beach Containers */
+        .beach-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
             margin: 20px auto;
+            gap: 20px;
             padding: 20px;
-            background-color: rgba(32, 22, 6, 0.883);
-            border-radius: 15px;
-            border: 2px solid #000000;
+            max-width: 1200px;
         }
 
-        #beachclick h2 {
-            color: #1f1003;
-        }
-
-        #beachclick input, #beachclick textarea {
-            margin-bottom: 10px;
-            padding: 12px;
-            border: 1px solid #c9b8a3;
+        .beach-card {
+            width: 300px;
+            height: 200px;
+            position: relative;
+            overflow: hidden;
             border-radius: 10px;
-            font-size: 1em;
-            background-color: #fff9f4;
-            color: #ffffff;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        #beachclick button {
-            padding: 12px;
-            background: #dbc5a9;
-            color: #271403;
-            border: none;
+        .beach-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
             border-radius: 10px;
-            cursor: pointer;
-            font-weight: 600;
-            transition: background 0.3s ease, transform 0.3s ease;
         }
 
-        #beachclick button:hover {
-            background: #8bdcf0;
+        .beach-card:hover {
             transform: scale(1.05);
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
         }
 
+        .beach-card .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5em;
+            font-weight: bold;
+            border-radius: 10px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .beach-card:hover .overlay {
+            opacity: 1;
+        }
     </style>
 </head>
 <body>
-
     <header>
-        <h1>Where shall we go? </h1>
+        <h1>Where shall we go?</h1>
     </header>
 
-    <section id="Beach one">
-        <h2>Send me a message</h2>
-        <form>
+    <section class="beach-container">
+        <!-- Beach 1 -->
+        <a href="https://www.visitmexico.com/en/main-destinations/qr/cancun" target="_blank" class="beach-card">
+            <img src="cancun3.jpg" alt="Cancun Beach">
+            <div class="overlay">Cancun</div>
+        </a>
 
-            <button type="submit">Send Message</button>
-        </form>
+        <!-- Beach 2 -->
+        <a href="https://www.borabora.com/" target="_blank" class="beach-card">
+            <img src="borabora" alt="Bora Bora Beach">
+            <div class="overlay">Florida</div>
+        </a>
+
+        <!-- Beach 3 -->
+        <a href="https://www.througheternity.com/en/blog/travel-tips/10-Best-Beaches-of-Mykonos.html#" target="_blank" class="beach-card">
+            <img src="Paradise_1.jpg" alt="Paradise Beach in Mykonos">
+            <div class="overlay">Hawaii</div>
+        </a>
+
+        <!-- Beach 4 -->
+        <a href="https://magazine.tablethotels.com/en/2019/03/national-bird/" target="_blank" class="beach-card">
+            <img src="VakkaruMaldives.jpg" alt="The Maldives">
+            <div class="overlay">Bora Bora</div>
+        </a>
     </section>
-
 </body>
 </html>
+
