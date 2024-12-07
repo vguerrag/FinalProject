@@ -126,7 +126,7 @@
         newBeachCard.className = "beach-card";
         newBeachCard.innerHTML = `
             <img src="sunset.jpg" alt="Beach">
-            <div class="overlay">What Mystery beach is this?/div>
+            <div class="overlay"> Mystery beach /div>
         `;
         beachContainer.appendChild(newBeachCard);
 
@@ -134,7 +134,7 @@
         const beachCards = document.querySelectorAll(".beach-card");
         beachCards.forEach(card => {
             card.addEventListener("click", (event) => {
-                alert(`You clicked on ${card.querySelector(".overlay").textContent} mystery beach!`);
+                alert(`You clicked on ${card.querySelector(".overlay").textContent} beach!`);
             });
         });
     </script>
