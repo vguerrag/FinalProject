@@ -1,1 +1,137 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sippin Coconuts </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spicy+Rice&display=swap" rel="stylesheet">
+
+    <style>
+        /* Keyframe animation to fade in the background image */
+        @keyframes fadeInBackground {
+            0% {
+                opacity: 0; /* Start with image hidden */
+            }
+            100% {
+                opacity: 1; /* Fade to fully visible */
+            }
+        }
+
+        /* Base Styles */
+        body {
+            margin: 0;
+            font-family: "Spicy Rice", sans-serif;
+            background-image: url('sunset.jpg');
+            background-size: cover;
+            background-position: center;
+            animation: fadeInBackground 3s ease-out forwards; /* Apply the fade-in animation, stays visible after */
+            background-attachment: fixed;
+            opacity: 0; /* Start with opacity 0 */
+        }
+
+        /* Header */
+        header {
+            background: #118cd4;
+            color: #79502c;
+            padding: 20px;
+            text-align: left;
+            font-family: 'Spicy Rice', cursive;
+        }
+
+        header h1 {
+            font-size: 2.8em;
+            margin: 0;
+        }
+
+        nav {
+            margin: 20px 0;
+        }
+
+        nav a {
+            color: #291603;
+            text-decoration: none;
+            padding: 8px 12px;
+            margin: 0 10px;
+            border-radius: 15px;
+            background: #e8ded0;
+            font-weight: 400;
+            transition: background-color 0.50s ease, transform 0.50s ease;
+        }
+
+        nav a:hover {
+            background: #c9b8a3;
+            transform: scale(1.05);
+        }
+
+        /* Flex Container for The Goal and song */
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: center; 
+            justify-content: center;
+            margin: 20px auto;
+            padding: 0 20px;
+            max-width: 800px;
+        }
+
+        .The-Goal, .song {
+            width: 100%;  
+            margin: 10px 0;  
+            padding: 20px;
+            background-color: rgba(43, 103, 232, 0.4);
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); 
+        }
+
+        .The-Goal h2, .song h2 {
+            font-size: 1.8em;
+            text-align: center;
+            color: #b74b30;
+        }
+
+        .The-Goal p, .song p {
+            font-size: 1.1em;
+            text-align: center;
+            color: #f3f5f6;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .The-Goal, .song, #contact {
+                flex: 1 1 100%;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Beach Love</h1>
+        <nav>
+                <a href="">Contact</a> 
+        </nav>
+    </header>
+
+    <section class="flex-container">
+        <section class="The-Goal" id="The-Goal">
+            <h2>The Goal</h2>
+            <p>I love the beach, & I hope you do too! Here is the place to book your trip!</p>
+        </section> 
+        
+        <section class="song" id="song">
+            <h2>a song that reminds Me of the Beach</h2>
+            <p>Cancun is especially my favorite place, it brings nostalgia from going on family vacations. My recent trip was with my friends and it was a memory I'll never forget. So this song brings me back to that girls trip with them!
+                <a href="https://www.youtube.com/watch?v=ARWg160eaX4" target="_blank" rel="noopener noreferrer">
+                    "Bad Bunny - Neverita" on YouTube
+                </a>.
+            </p>
+        </section>
+    </section>
+
+</body>
+</html>
